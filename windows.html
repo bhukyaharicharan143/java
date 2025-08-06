@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Open the console to see window events</h1>
+    <script>
+        window.addEventListener('load',()
+        {
+            console.log('window has loaded');
+        });
+        window.addEventListener('resize',()
+        {
+            console.log('windowresized to ${window.innerWidth}x${window.innerheight}');
+        });
+        window.addEventListener('beforeunload',(event){
+            event.preventDefault();
+            event.returnValue = '';
+        });
+    </script>
+</body>
+</html>

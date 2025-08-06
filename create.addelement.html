@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T0-D0 list</title>
+</head>
+<body>
+    <h2>My To-D0 List</h2>
+    <form onsubmit="addItem(event)">
+    <input type="text" id="itemInput" placeholder="enter.."required>
+    <button type="submit">Add</button>
+    </form>
+    <ul id="list"></ul>
+    <script>
+        function addItem(event) { 
+
+            
+            event.preventDefault();//stop from reloading
+
+            // one line to get the input value
+            let itemText = document.getElementById("itemInput").value;
+            //create<li>and add text
+                let li = document.createElement("li");
+                li.innerText = itemText;
+
+                //Add <li> to the <ul>
+                    document.getElementById("list").appendChild(li);
+
+                    // Clear the input field
+                    document.getElementById("itemInput").value="";
+        }
+    </script>
+</body>
+</html>

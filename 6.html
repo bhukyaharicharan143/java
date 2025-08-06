@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Example - All in One</title>
+  <style>
+    #output {
+      color: blue;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="mainTitle">Welcome to DOM websites</h1>
+
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button onclick="showName()">Show Name</button>
+  <button onclick="changeStyle()">Change Style</button>
+  <button onclick="addItem()">Add Item</button>
+  <button onclick="removeLast()">Remove Last</button>
+
+  <!-- Buttons for opening websites -->
+  <button onclick="web()">Google</button>
+  <button onclick="web1()">Facebook</button>
+  <button onclick="web2()">YouTube</button>
+  <button onclick="web3()">LinkedIn</button>
+  <button onclick="web4()">Instagram</button>
+  <button onclick="web5()">Twitter</button>
+  <button onclick="web6()">Pinterest</button>
+  <button onclick="web7()">TikTok</button>
+  <button onclick="web8()">Snapchat</button>
+  <button onclick="web9()">Reddit</button>
+  <button onclick="web10()">eBay</button>
+  <button onclick="web11()">Walmart</button>
+  <button onclick="web12()">Etsy</button>
+  <button onclick="web15()"> amazon</button>
+  <button onclick="web16()">Netflix</button>
+  <button onclick="web17()">Disney+</button>
+  <button onclick="web18()"> Hulu</button>
+  <button onclick="web19()">flipkrad</button>
+
+
+
+  <div id="output"></div>
+
+  <ul id="nameList">
+    <li>Example Name 1</li>
+  </ul>
+
+  <script>
+    function showName() {
+      const input = document.getElementById("nameInput").value;
+      const outputDiv = document.getElementById("output");
+      outputDiv.textContent = "Hello, " + input + "!";
+    }
+
+    function changeStyle() {
+      const title = document.getElementById("mainTitle");
+      title.style.color = "green";
+      title.classList.toggle("highlight");
+    }
+
+    function addItem() {
+      const input = document.getElementById("nameInput").value;
+      if (input.trim() !== "") {
+        const newItem = document.createElement("li");
+        newItem.textContent = input;
+        newItem.addEventListener("click", function () {
+          alert("You clicked: " + newItem.textContent);
+        });
+        document.getElementById("nameList").appendChild(newItem);
+      }
+    }
+
+    function removeLast() {
+      const list = document.getElementById("nameList");
+      if (list.lastElementChild) {
+        list.removeChild(list.lastElementChild);
+      }
+    }
+
+    function web() { window.location.href = "https://www.google.com"; }
+    function web1() { window.location.href = "https://www.facebook.com"; }
+    function web2() { window.location.href = "https://www.youtube.com"; }
+    function web3() { window.location.href = "https://www.linkedin.com"; }
+    function web4() { window.location.href = "https://www.instagram.com"; }
+    function web5() { window.location.href = "https://www.twitter.com"; }
+    function web6() { window.location.href = "https://www.pinterest.com"; }
+    function web7() { window.location.href = "https://www.tiktok.com"; }
+    function web8() { window.location.href = "https://www.snapchat.com"; }
+    function web9() { window.location.href = "https://www.reddit.com"; }
+    function web10() { window.location.href = "https://www.ebay.com"; }
+    function web11() { window.location.href = "https://www.walmart.com"; }
+    function web12() { window.location.href = "https://www.etsy.com"; }
+    function web15() { window.location.href = "https://www.amazon.com"; }
+    function web16() { window.location.href = "https://www.netflix.com"; }
+    function web17() { window.location.href = "https://www.disneyplus.com"; }
+    function web18() { window.location.href = "https://www.hulu.com"; }
+    function web19() { window.location.href = "https://www.flipkart.com"; }
+  </script>
+
+</body>
+</html>

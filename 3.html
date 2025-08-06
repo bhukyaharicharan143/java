@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rotating NSS Logo</title>
+  <style>
+    body {
+      text-align: center;
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .logo-container {
+      margin-top: 200px;
+    }
+
+    .rotate {
+      width: 200px;
+      height: 200px;
+      animation: spin 20s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    img{
+        border-radius: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="https://tse1.mm.bing.net/th/id/OIP.NMQs-DDmozT9jFbtL94L1gHaHa?pid=Api&P=0&h=180" alt="NSS Logo" class="rotate">
+    <h2>National Service Scheme</h2>
+  </div>
+</body>
+</html>

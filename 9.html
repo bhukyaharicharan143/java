@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events Example</title>
+</head>
+<body>
+    <h1>Open the console to see window events</h1>
+
+    <script>
+        // Event: window has fully loaded
+        window.addEventListener('load', () => {
+            console.log('Window has loaded');
+        });
+
+        // Event: window resized
+        window.addEventListener('resize', () => {
+            console.log(`Window resized to ${window.innerWidth}x${window.innerHeight}`);
+        });
+
+        // Event: before user unloads the page
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            event.returnValue = ''; 
+            console.log('User is about to leave the page');
+            // You can also prompt the user before leaving
+            // const confirmation = confirm('Are you sure you want to leave?');
+            // if (!confirmation) {
+            //     event.preventDefault();
+            //     event.returnValue = '';
+            // }
+            // Prompt the user before leaving
+            const confirmation = confirm('Are you sure you want to leave?');
+            if (!confirmation) {
+                event.preventDefault();
+                event.returnValue = '';
+            }
+        });
+    </script>
+</body>
+</html>

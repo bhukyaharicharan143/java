@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 2px solid black;                    
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "parent">
+        <h2>Heading</h2>
+        <p>Paragraph1</p>
+        <p id ="target">Paragraph2</p>
+        <p>Paragraph 3</p> 
+    </div>
+    <script>
+        const elem = document.getElementById("target");
+
+        // Parent Traversal
+        console.log("parentElement:",elem.parentElement.id);
+        //child traversal from parent
+
+        constchildren=elem.parentElement.children;
+        console.log("children",children);
+
+        console.log("firstchild:",elem.parentElement.firstElementChild.innerText);//'Heading
+        console.log("lastchild:",elem.parentElement.lastElementChild.innerText);//'paragraph3'
+
+        //siblingtraversal
+        console.log("previous sibling:",elem.previousElementSibling.innerText);//'paragraph1'
+        console.log("next sibling:",elem.nextElementSibling.innerText);//'pragraph 3'
+
+        console.log("previousSibling(might be text :)",elem.previousSibling);
+        console.log("childNodes (include text):",elem.parentElement.childNodes);
+    '
+    </script>
+
+</body>
+</html>

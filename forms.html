@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widt
+    
+    
+    h, initial-scale=1.0">
+    <title>Form Events</title>
+    <script languag="javascript">
+        function robo ()
+        {
+            alert("The form was submitted");
+    
+        }
+        function chitti()
+        {
+            alert("The form was reset");
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="robo()" onreset="chitti()">
+        Enter name:<input type="text" name="fname">
+        <input type = "submit"value="Submit">
+        <input type = "reset"value="Reset">
+    </form>
+    
+</body>
+</html>
